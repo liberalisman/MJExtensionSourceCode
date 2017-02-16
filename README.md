@@ -22,7 +22,9 @@
 9.**``MJExtensionConst``**一些基本的配置信息的宏,比如断言,错误,日志输出等等.
 
 ### 主要逻辑的说明
-1.从字典转模型基本方法 **- (instancetype)mj_setKeyValues:(id)keyValues context:(NSManagedObjectContext *)context**
+1.从字典转模型基本方法 
+
+**- (instancetype)mj_setKeyValues:(id)keyValues context:(NSManagedObjectContext *)context**
 
 开始捋顺逻辑:
  
