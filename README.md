@@ -1,6 +1,6 @@
 # MJExtensionSourceCode
-针对MJExtension的源代码歇一歇自己的理解
 
+主要是针对MJExtension的源代码写一写自己的理解。请多多指教。
 ### 结构
 
 1.**``NSObjecte+MJKeyValue``**提供的字典和模型互相转换的核心代码和逻辑.
@@ -22,7 +22,9 @@
 9.**``MJExtensionConst``**一些基本的配置信息的宏,比如断言,错误,日志输出等等.
 
 ### 主要逻辑的说明
-1.从字典转模型基本方法 ==- (instancetype)mj_setKeyValues:(id)keyValues context:(NSManagedObjectContext *)context== 开始捋顺逻辑:
+1.从字典转模型基本方法 **- (instancetype)mj_setKeyValues:(id)keyValues context:(NSManagedObjectContext *)context**
+
+开始捋顺逻辑:
  
 ![](http://okhqmtd8q.bkt.clouddn.com/MJExtension%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-01.jpg)
 
@@ -48,8 +50,8 @@
 **注意获取的结果解释:**
  属性类型  name值：T  value：变化
  编码类型  name值：C(copy) &(strong) W(weak)空(assign) 等 value：无
-非/原子性 name值：空(atomic) N(Nonatomic)  value：无
-变量名称  name值：V  value：变化
+ 非/原子性 name值：空(atomic) N(Nonatomic)  value：无
+ 变量名称  name值：V  value：变化
 
 ```
     unsigned int outPut = 0;
