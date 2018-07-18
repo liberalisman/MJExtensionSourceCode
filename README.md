@@ -3,23 +3,23 @@
 主要是针对MJExtension的源代码写一写自己的理解。请多多指教。
 ### 结构
 
-1.**``NSObjecte+MJKeyValue``**提供的字典和模型互相转换的核心代码和逻辑.
+1.`NSObjecte+MJKeyValue` 提供的字典和模型互相转换的核心代码和逻辑.
 
-2.**``NSObject+MJProperty``**提供了字典key值和value值与模型属性的相对对应关系的配置.最常见写在模型中的方法``mj_setupReplacedKeyFromPropertyName``和``mj_setupObjectClassInArray``
+2.`NSObject+MJProperty`提供了字典 key 值和 value 值与模型属性的相对对应关系的配置.最常见写在模型中的方法`mj_setupReplacedKeyFromPropertyName` 和 `mj_setupObjectClassInArray`
 
-3.**``NSObject+MJCoding``**主要是模型的归档和解码.外界实现比较方法,主要是一个宏,这个宏其实是代替两个方法.
+3.`NSObject+MJCoding` 主要是模型的归档和解码.外界实现比较方法,主要是一个宏,这个宏其实是代替两个方法.
 
-4.**``NSObject+MJClass``**提供了遍历属性类型父类的方法.以及模型和字典互转过程中需要转化的白名单和黑名单.
+4.`NSObject+MJClass` 提供了遍历属性类型父类的方法.以及模型和字典互转过程中需要转化的白名单和黑名单.
 
-5.**``MJProperty``**包装模型中每个属性,包括属性的类型,属性的名字,父类.储存和取出属性对应的值.
+5.`MJProperty` 包装模型中每个属性,包括属性的类型,属性的名字,父类.储存和取出属性对应的值.
 
-6.**``MJPropertyKey``**模型对应的key值,以及他的对应的类型(字典还是数组)
+6.`MJPropertyKey` 模型对应的 key 值,以及他的对应的类型(字典还是数组)
 
-7.**``MJPropertyType``**属性对应的类型,这个里面比较细:比如这个属性是一个基本类型,还是一个foundation类,还是另外一个模型类型等等.
+7.`MJPropertyType` 属性对应的类型,这个里面比较细:比如这个属性是一个基本类型,还是一个 foundation 类,还是另外一个模型类型等等.
 
-8.**``MJFoundation``**这两个类分别代表遍历某个类是不是**``Foudation``**框架下
+8.`MJFoundation` 这两个类分别代表遍历某个类是不是 `Foudation` 框架下
 
-9.**``MJExtensionConst``**一些基本的配置信息的宏,比如断言,错误,日志输出等等.
+9.`MJExtensionConst` 一些基本的配置信息的宏,比如断言,错误,日志输出等等.
 
 ### 主要逻辑的说明
 1.从字典转模型基本方法 
